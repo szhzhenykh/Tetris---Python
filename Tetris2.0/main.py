@@ -12,6 +12,14 @@ clock = pygame.time.Clock()  # list of which balloons are bombs
 
 
 def image_loader(size=(10., 10.), name = "Mainback"):
+    """
+    Loads images from the Texture folder 
+    -----
+    :param size: Scaling size
+    :param name: Name of needed file
+    -----
+    :return: Pygame Image variable 
+    """
     folder = Path("Textures")
     texture = None
     fileExt = {".png", ".jpg", ".jpeg"}
@@ -1005,4 +1013,5 @@ while run:
         end.draw(level, point, linecleared)
         endBool, startbool, playbool, play, run, timer = end.press_check(endBool, startbool, playbool, play, shape_list, run, timer)
 pygame.quit()
+
 pygame.display.quit()
